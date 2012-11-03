@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map>
+<Map bgcolor="steelblue" srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+
+
+
+ <Style name="My Style">
+      <Rule>
+          <RasterSymbolizer/>
+      </Rule>
+  </Style>
+
+<Layer name="Raster">
+    <StyleName>raster</StyleName>
+    <Datasource>
+        <Parameter name="type">raster</Parameter>
+        <Parameter name="file">OSI_50000_Raster_IG.tif</Parameter>
+        <Parameter name="lox">-10.038071</Parameter>
+        <Parameter name="loy">51.958740</Parameter>
+        <Parameter name="hix">-9.7284</Parameter>
+        <Parameter name="hiy">52.137</Parameter>
+    </Datasource>
+</Layer>
+
+</Map>

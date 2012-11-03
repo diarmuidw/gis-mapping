@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map>
+<Map bgcolor="steelblue" srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+
+
+
+ <Style name="My Style">
+      <Rule>
+          <RasterSymbolizer/>
+      </Rule>
+  </Style>
+
+    <Style name="raster">
+      <Rule>
+	<RasterSymbolizer>
+          <CssParameter name="opacity">1.0</CssParameter>
+          <CssParameter name="scaling">bilinear</CssParameter>
+          <CssParameter name="mode">grain_merge</CssParameter>
+	</RasterSymbolizer>
+      </Rule>
+    </Style>
+
+
+<Layer name="dem-N45E006" status="on">
+	<StyleName>raster</StyleName>
+	<Datasource>
+		<Parameter name="type">gdal</Parameter>
+		<Parameter name="file">/home/bluekulu/Development/mapniktest/test/c_OSI_50000_Raster_IG_modified.tif</Parameter>
+		<Parameter name="format">tiff</Parameter>
+	</Datasource>
+</Layer>
+
+
+
+
+  <Style name="My Style">
+    <Rule>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">#f2eff9</CssParameter>
+      </PolygonSymbolizer>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(50%,50%,50%)</CssParameter>
+        <CssParameter name="stroke-width">0.1</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+  </Style>
+
+  <Layer name="world" srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    <StyleName>My Style</StyleName>
+    <Datasource>
+      <Parameter name="type">shape</Parameter>
+      <Parameter name="file">ne_110m_admin_0_countries</Parameter>
+    </Datasource>
+  </Layer>
+
+
+</Map>

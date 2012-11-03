@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map>
+<Map srs="+proj=merc +lon_0=0 +lat_ts=0 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +units=m +no_defs">
+
+  <Style name="My Style">
+    <Rule>
+
+    </Rule>
+  </Style>
+ <Style name="StreetStyle">
+<Rule>
+<LineSymbolizer>
+
+</LineSymbolizer>
+</Rule>
+<Rule>
+</Rule>
+</Style>
+
+
+
+    <Style name="raster">
+      <Rule>
+	<RasterSymbolizer>
+	</RasterSymbolizer>
+      </Rule>
+    </Style>
+
+
+<Layer name="dem-N45E006" srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+	<StyleName>raster</StyleName>
+	<Datasource>
+		<Parameter name="type">gdal</Parameter>
+		<Parameter name="file">/home/bluekulu/Development/mapniktest/test/TrueMarble.16km.2700x1350.tif</Parameter>
+		<Parameter name="format">tiff</Parameter>
+	</Datasource>
+</Layer>
+
+
+<Layer name="dem-N45E006" srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+	<StyleName>raster</StyleName>
+	<Datasource>
+		<Parameter name="type">gdal</Parameter>
+		<Parameter name="file">/home/bluekulu/Development/mapniktest/test/E_OSI_50000_Raster_IG_modified.tif</Parameter>
+		<Parameter name="format">tiff</Parameter>
+	</Datasource>
+</Layer>
+
+  <Layer name="vector" srs="+init=epsg:4236">
+          <StyleName>StreetStyle</StyleName>
+          <Datasource>
+                  <Parameter name="type">shape</Parameter>
+                  <!-- you can also point to your shapefile without the 'shp' extention -->
+                  <Parameter name="file">ireland/ireland_coastline</Parameter>
+          </Datasource>
+  </Layer>
+
+
+
+
+
+</Map>

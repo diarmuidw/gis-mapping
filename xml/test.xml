@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map>
+<Map srs="+proj=merc +lon_0=0 +lat_ts=0 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +units=m +no_defs">
+
+
+
+
+    <Style name="raster">
+      <Rule>
+	<RasterSymbolizer>
+	</RasterSymbolizer>
+      </Rule>
+    </Style>
+
+<Layer name="dem-N45E006" srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+	<StyleName>raster</StyleName>
+	<Datasource>
+		<Parameter name="type">gdal</Parameter>
+		<Parameter name="file">/home/bluekulu/Development/mapniktest/test/TrueMarble.16km.2700x1350.tif</Parameter>
+		<Parameter name="format">tiff</Parameter>
+	</Datasource>
+</Layer>
+
+ <Style name="My Style">
+      <Rule>
+          <RasterSymbolizer/>
+      </Rule>
+  </Style>
+
+<Layer name="Raster">
+    <StyleName>raster</StyleName>
+    <Datasource>
+        <Parameter name="type">raster</Parameter>
+        <Parameter name="file">OSI_50000_Raster_IG.tif</Parameter>
+        <Parameter name="lox">-10.038071</Parameter>
+        <Parameter name="loy">51.958740</Parameter>
+        <Parameter name="hix">-9.7284</Parameter>
+        <Parameter name="hiy">52.137</Parameter>
+    </Datasource>
+</Layer>
+
+</Map>
